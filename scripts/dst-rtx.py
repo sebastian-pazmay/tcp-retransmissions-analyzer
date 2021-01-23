@@ -19,7 +19,7 @@ total_pcap_pkts = rdpcap(pcap_file)
 ## Calculate total packets in pcap file
 total_pkts_count = len(total_pcap_pkts)
 
-## Filter packets based on src and dst ip
+## Filter packets based on dst ip
 pkt_counter = 0
 filtered_ip_pkts = []
 for pkt in total_pcap_pkts:

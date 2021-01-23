@@ -6,12 +6,11 @@ import pyshark
 ## TODO:
 ## Change vars to input arguments
 pcap_file = 'pcap-captures/mycap2.pcap'
-src_ip = "23.56.172.136"
-dst_ip = "190.57.158.174"
+src_net = "23.56.172.0/24"
 
 ## Print IPs for Analysis
 print('####################################################################')
-print(f'Analysis for src IP: "{src_ip}" && dst IP: "{dst_ip}"')
+print(f'Analysis for src network: "{src_net}"')
 print('####################################################################\n')
 
 ## Read pcap files using Scapy
@@ -20,25 +19,24 @@ total_pcap_pkts = rdpcap(pcap_file)
 ## Calculate total packets in pcap file
 total_pkts_count = len(total_pcap_pkts)
 
-## Filter packets based on src and dst ip
-pkt_counter = 0
-filtered_ip_pkts = []
-for pkt in total_pcap_pkts:
-    if pkt[IP].src == src_ip and pkt[IP].dst == dst_ip:
-        filtered_ip_pkts.append(pkt)
-        pkt_counter +=1
+## Filter packets based on src network
+src_net_filter = 'ip.src=='+ src_net
+src_net_total_pkts = pyshark.FileCapture(pcap_file, display_filter=src_net_filter)
+src_net_counter = 0
+for src_net_pkt in src_net_total_pkts:
+    src_net_counter +=1
 
 ## Filter packets to obtain only retransmissions
-re_tx_filter = 'tcp.analysis.retransmission && ip.src=='+ src_ip + ' && ip.dst==' + dst_ip
+re_tx_filter = 'tcp.analysis.retransmission && ip.src=='+ src_net
 re_tx_total_pkts = pyshark.FileCapture(pcap_file, display_filter=re_tx_filter)
 re_tx_counter = 0
 for re_tx_pkt in re_tx_total_pkts:
     re_tx_counter +=1
 
 print('####################################################################')
-print('between given IPs:')
-print(f'total pkts: {pkt_counter}')
-print(f're-tx pkts: "{re_tx_counter}" - percentage: "{round((re_tx_counter*100)/pkt_counter,2)}%"')
+print('for given src network:')
+print(f'total pkts: {src_net_counter}')
+print(f're-tx pkts: "{re_tx_counter}" - percentage: "{round((re_tx_counter*100)/src_net_counter,2)}%"')
 
 print('####################################################################\n')
 print('####################################################################')
