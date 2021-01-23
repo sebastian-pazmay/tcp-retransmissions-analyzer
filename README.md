@@ -10,11 +10,11 @@ This directory contains different scripts to display tcp re-transmissions. Each 
 $ python3 scripts/src-dst-rtx.py
 ```
 
-## Requirements for Linux
+**Required libraries**
 
 Requirements to be installed before running scripts
 
 ```sh
-$ apt-get install -y tshark
+$ apt install -y tshark
 $ pip3 install -r requirements.txt
 ```
