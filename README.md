@@ -1,6 +1,8 @@
 # tcp-retransmissions-analyzer
 
-### Required Packages
+## Requirements for Linux
 
-[Pyshark](https://pypi.org/project/pyshark/)
-[Tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+```sh
+$ apt-get install -y tshark
+$ pip3 install -r requirements.txt
+```
