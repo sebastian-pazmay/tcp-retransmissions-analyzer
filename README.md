@@ -12,7 +12,7 @@ $ python3 scripts/src-dst-rtx.py
 
 **Required libraries**
 
-Requirements to be installed before running scripts
+Requirements to be installed before running scripts:
 
 ```sh
 $ apt install -y tshark
