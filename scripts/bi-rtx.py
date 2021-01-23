@@ -2,6 +2,15 @@
 from scapy.all import *
 import pyshark
 
+""" Script bi-rtx.py:
+Function:
+- Pcap file, source and destination IP addresses as inputs
+- Calculate amount of total packets between given IPs
+- Calculate amount of re-transmission packets between given IPs
+- Calculate percentage of re-transmission packets between given IPs
+- Calculate amount of total packets in given pcap file
+"""
+
 ## Input variables
 ## TODO:
 ## Change vars to input arguments

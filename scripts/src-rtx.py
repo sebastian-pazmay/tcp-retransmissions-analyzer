@@ -2,6 +2,15 @@
 from scapy.all import *
 import pyshark
 
+""" Script src-rtx.py:
+Function:
+- Pcap file and source IP address as inputs
+- Calculate amount of total packets for given IP
+- Calculate amount of re-transmission packets for given IP
+- Calculate percentage of re-transmission packets for given IP
+- Calculate amount of total packets in given pcap file
+"""
+
 ## Input variables
 ## TODO:
 ## Change vars to input arguments

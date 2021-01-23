@@ -2,6 +2,14 @@
 from scapy.all import *
 import pyshark
 
+""" Script net-bi-rtx.py:
+Function:
+- Pcap file, source and destination networks as inputs
+- Calculate amount of total packets between given networks
+- Calculate amount of re-transmission packets between given networks
+- Calculate percentage of re-transmission packets between given networks
+- Calculate amount of total packets in given pcap file
+"""
 ## Input variables
 ## TODO:
 ## Change vars to input arguments
