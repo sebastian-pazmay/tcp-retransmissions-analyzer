@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 from scapy.all import *
 import pyshark
 
 ## Input variables
 ## TODO:
 ## Change vars to input arguments
-pcap_file = '../pcap-captures/mycap2.pcap'
+pcap_file = 'pcap-captures/mycap2.pcap'
 
 # Required filter example:
 # tcp.analysis.retransmission && ip.src == 190.57.158.160/27

@@ -4,6 +4,5 @@ import pyshark
 
 def main():
   print("Hello World!")
-  indirect()
   
 main()
