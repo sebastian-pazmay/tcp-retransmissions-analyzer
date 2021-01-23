@@ -1,8 +1,10 @@
 # tcp-retransmissions-analyzer
 
+At the moment this project only contains scripts to analyze tcp re-transmissions given a pcap file.
+
 ## Scripts
 
-This directory contains different scripts to display tcp re-transmissions. In order to execute the scripts: 
+This directory contains different scripts to display tcp re-transmissions. Each script contains documentation about its purpose. In order to execute the scripts: 
 
 ```sh
 $ python3 scripts/src-dst-rtx.py
