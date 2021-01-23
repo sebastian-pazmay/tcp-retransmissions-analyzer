@@ -24,7 +24,7 @@ total_pkts_count = len(total_pcap_pkts)
 pkt_counter = 0
 filtered_ip_pkts = []
 for pkt in total_pcap_pkts:
-    if pkt[IP].src == src_ip or pkt[IP].dst == dst_ip:
+    if pkt[IP].src == src_ip and pkt[IP].dst == dst_ip:
         filtered_ip_pkts.append(pkt)
         pkt_counter +=1
 
@@ -36,9 +36,10 @@ for re_tx_pkt in re_tx_total_pkts:
     re_tx_counter +=1
 
 print('####################################################################')
-print('Re-transmissions packets:')
-print(f're-tx pkts between given IPs: {re_tx_counter}')
-print(f'total pkts between given IPs: {pkt_counter}')
+print('between given IPs:')
+print(f'total pkts: {pkt_counter}')
+print(f're-tx pkts: "{re_tx_counter}" - percentage: "{round((re_tx_counter*100)/pkt_counter,2)}%"')
+
 print('####################################################################\n')
 print('####################################################################')
 print(f'Total pkts in pcap file: {total_pkts_count}')
