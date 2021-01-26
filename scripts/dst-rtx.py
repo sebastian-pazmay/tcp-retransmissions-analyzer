@@ -14,7 +14,7 @@ Function:
 ## Input variables
 ## TODO:
 ## Change vars to input arguments
-pcap_file = 'pcap-captures/mycap2.pcap'
+pcap_file = 'sample-captures/tcp.pcap'
 dst_ip = "190.57.158.174"
 
 ## Print IPs for Analysis
