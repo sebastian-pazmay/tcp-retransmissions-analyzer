@@ -11,11 +11,8 @@ Function:
 - Calculate amount of total packets in given pcap file
 """
 
-## Input variables
-## TODO:
-## Change vars to input arguments
 pcap_file = 'sample-captures/tcp.pcap'
-dst_ip = "190.57.158.174"
+dst_ip = '192.168.10.1'
 
 ## Print IPs for Analysis
 print('####################################################################')

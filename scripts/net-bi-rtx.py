@@ -10,12 +10,10 @@ Function:
 - Calculate percentage of re-transmission packets between given networks
 - Calculate amount of total packets in given pcap file
 """
-## Input variables
-## TODO:
-## Change vars to input arguments
+
 pcap_file = 'sample-captures/tcp.pcap'
-src_net = "23.56.172.0/24"
-dst_net = "190.57.158.0/24"
+src_net = '10.10.10.0/24'
+dst_net = '192.168.10.0/24'
 
 ## Print IPs for Analysis
 print('####################################################################')

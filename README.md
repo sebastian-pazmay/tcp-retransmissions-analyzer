@@ -4,7 +4,7 @@ At the moment this project only contains scripts to analyze tcp re-transmissions
 
 ## Scripts
 
-This directory contains different scripts to display tcp re-transmissions. Each script contains documentation about its purpose. In order to execute the scripts: 
+This directory contains different scripts to display tcp re-transmissions. Each script contains documentation about its purpose. A sample capture is provided to test the scripts. In order to execute the scripts: 
 
 ```sh
 $ python3 scripts/src-dst-rtx.py
