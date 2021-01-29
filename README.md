@@ -18,3 +18,12 @@ Requirements to be installed before running scripts:
 $ apt install -y tshark
 $ pip3 install -r requirements.txt
 ```
+
+### Dockerfile
+
+In order to test the scripts, a Dockerfile is provided. The following commands allow you to build an image from the Dockerfile and run the container from the created image.
+
+```sh
+$ docker build -t bi_rtx -f Dockerfile --build-arg SCRIPT=bi_rtx .
+$ docker run bi_rtx:latest
+```
