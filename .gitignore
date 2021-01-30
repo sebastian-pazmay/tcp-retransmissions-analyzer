@@ -14,3 +14,7 @@ venv.bak/
 
 # Ignore directory for local testing
 local-testing/
+
+# Ignore files for gitlab ci
+.gitlab-ci.yml
+.gitlab-pipeline/
